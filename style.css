@@ -1,1 +1,186 @@
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#050505;
+color:white;
+overflow-x:hidden;
+}
+
+.bg{
+position:fixed;
+width:100%;
+height:100%;
+background:
+radial-gradient(circle at top,#00ff8850 0%,transparent 45%),
+radial-gradient(circle at bottom,#00ff5530 0%,transparent 40%);
+z-index:-1;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px 8%;
+position:sticky;
+top:0;
+backdrop-filter:blur(15px);
+background:rgba(0,0,0,.35);
+}
+
+nav h1{
+font-size:34px;
+color:#00ff88;
+font-weight:800;
+}
+
+nav a{
+text-decoration:none;
+color:black;
+background:#00ff88;
+padding:12px 28px;
+border-radius:50px;
+font-weight:700;
+transition:.3s;
+}
+
+nav a:hover{
+transform:scale(1.05);
+box-shadow:0 0 20px #00ff88;
+}
+
+.hero{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:90px 8%;
+gap:50px;
+flex-wrap:wrap;
+}
+
+.texto{
+flex:1;
+min-width:300px;
+}
+
+.texto h2{
+font-size:56px;
+line-height:1.1;
+margin-bottom:20px;
+}
+
+.texto p{
+font-size:20px;
+color:#bdbdbd;
+line-height:1.8;
+margin-bottom:35px;
+}
+
+.botao{
+display:inline-block;
+background:#00ff88;
+color:black;
+padding:18px 38px;
+border-radius:50px;
+text-decoration:none;
+font-weight:700;
+transition:.3s;
+}
+
+.botao:hover{
+box-shadow:0 0 25px #00ff88;
+}
+
+.celular{
+flex:1;
+display:flex;
+justify-content:center;
+}
+
+.celular img{
+width:330px;
+border-radius:35px;
+box-shadow:0 0 45px #00ff88;
+animation:flutuar 3s ease-in-out infinite;
+}
+
+@keyframes flutuar{
+0%{transform:translateY(0);}
+50%{transform:translateY(-15px);}
+100%{transform:translateY(0);}
+}
+
+.beneficios{
+padding:90px 8%;
+}
+
+.beneficios h2,
+.cta h2{
+text-align:center;
+font-size:42px;
+margin-bottom:50px;
+color:#00ff88;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+.card{
+background:#111;
+padding:30px;
+border-radius:20px;
+border:1px solid rgba(0,255,136,.2);
+transition:.4s;
+opacity:0;
+transform:translateY(40px);
+}
+
+.card.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 25px #00ff88;
+}
+
+.card h3{
+margin-bottom:12px;
+color:#00ff88;
+}
+
+.card p{
+color:#cfcfcf;
+line-height:1.6;
+}
+
+.cta{
+text-align:center;
+padding:90px 8%;
+}
+
+.cta p{
+font-size:20px;
+margin:20px auto 40px;
+max-width:700px;
+color:#bdbdbd;
+}
+
+@media(max-width:900px){
+
+.hero{
+flex-direction:column;
+text-align
